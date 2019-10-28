@@ -1,5 +1,5 @@
 --
--- File generated with SQLiteStudio v3.2.1 on Mon Oct 28 09:29:36 2019
+-- File generated with SQLiteStudio v3.2.1 on Mon Oct 28 10:43:28 2019
 --
 -- Text encoding used: UTF-8
 --
@@ -12,19 +12,198 @@ CREATE TABLE admin (
     a_expires  DATE
 );
 
+INSERT INTO admin (
+                      a_username,
+                      a_expires
+                  )
+                  VALUES (
+                      'xvilla',
+                      NULL
+                  );
+
+INSERT INTO admin (
+                      a_username,
+                      a_expires
+                  )
+                  VALUES (
+                      'jakeafred',
+                      NULL
+                  );
+
 
 -- Table: case
 CREATE TABLE [case] (
-    c_username   VARCHAR NOT NULL,
-    c_caseID     INTEGER PRIMARY KEY AUTOINCREMENT
-                         NOT NULL,
-    c_harasserID VARCHAR,
-    c_platform   VARCHAR NOT NULL,
-    c_notes      VARCHAR NOT NULL,
-    c_photos     BLOB,
-    c_isPublic   BOOLEAN NOT NULL,
-    c_isPending  BOOLEAN NOT NULL
+    c_username        VARCHAR NOT NULL,
+    c_caseID          INTEGER PRIMARY KEY AUTOINCREMENT,
+    c_harasserID      VARCHAR,
+    c_platform        VARCHAR NOT NULL,
+    c_notes           VARCHAR NOT NULL,
+    c_transcribedText VARCHAR,
+    c_isPublic        BOOLEAN NOT NULL,
+    c_isPending       BOOLEAN NOT NULL,
+    c_isAnon          BOOLEAN NOT NULL
 );
+
+INSERT INTO [case] (
+                       c_username,
+                       c_caseID,
+                       c_harasserID,
+                       c_platform,
+                       c_notes,
+                       c_transcribedText,
+                       c_isPublic,
+                       c_isPending,
+                       c_isAnon
+                   )
+                   VALUES (
+                       'xvilla',
+                       1,
+                       'jdoe69',
+                       'instagram',
+                       'jdoe pretended to be my friend john doe, but I know it wasn''t him because I was with him at the time. he sent unsolicited graphic images of his schlong',
+                       'transcribed text from photo goes here',
+                       'true',
+                       'true',
+                       'false'
+                   );
+
+INSERT INTO [case] (
+                       c_username,
+                       c_caseID,
+                       c_harasserID,
+                       c_platform,
+                       c_notes,
+                       c_transcribedText,
+                       c_isPublic,
+                       c_isPending,
+                       c_isAnon
+                   )
+                   VALUES (
+                       'xvilla',
+                       2,
+                       'jdoe69',
+                       'instagram',
+                       'jdoe pretended to be my friend john doe, but I know it wasn''t him because I was with him at the time. he sent unsolicited graphic images of his schlong',
+                       'transcribed text from photo goes here',
+                       'TRUE',
+                       'TRUE',
+                       'FALSE'
+                   );
+
+INSERT INTO [case] (
+                       c_username,
+                       c_caseID,
+                       c_harasserID,
+                       c_platform,
+                       c_notes,
+                       c_transcribedText,
+                       c_isPublic,
+                       c_isPending,
+                       c_isAnon
+                   )
+                   VALUES (
+                       'jakeafred',
+                       3,
+                       'ahernandez',
+                       'snapchat',
+                       'Lorem ipsum dolor sit',
+                       'transcribed text from photo goes here',
+                       'TRUE',
+                       'TRUE',
+                       'FALSE'
+                   );
+
+INSERT INTO [case] (
+                       c_username,
+                       c_caseID,
+                       c_harasserID,
+                       c_platform,
+                       c_notes,
+                       c_transcribedText,
+                       c_isPublic,
+                       c_isPending,
+                       c_isAnon
+                   )
+                   VALUES (
+                       'xvilla',
+                       4,
+                       'deerhunter',
+                       'facebook',
+                       'et, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut la',
+                       'transcribed text from photo goes here',
+                       'TRUE',
+                       'TRUE',
+                       'FALSE'
+                   );
+
+INSERT INTO [case] (
+                       c_username,
+                       c_caseID,
+                       c_harasserID,
+                       c_platform,
+                       c_notes,
+                       c_transcribedText,
+                       c_isPublic,
+                       c_isPending,
+                       c_isAnon
+                   )
+                   VALUES (
+                       'jakeafred',
+                       5,
+                       '2095555555',
+                       'mobile',
+                       'lore magna aliqua. Ut enim ad minim veniam, quis nostrud ',
+                       'transcribed text from photo goes here',
+                       'TRUE',
+                       'TRUE',
+                       'FALSE'
+                   );
+
+INSERT INTO [case] (
+                       c_username,
+                       c_caseID,
+                       c_harasserID,
+                       c_platform,
+                       c_notes,
+                       c_transcribedText,
+                       c_isPublic,
+                       c_isPending,
+                       c_isAnon
+                   )
+                   VALUES (
+                       'xvilla',
+                       6,
+                       'deez',
+                       'twitter',
+                       'isi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehend',
+                       'transcribed text from photo goes here',
+                       'TRUE',
+                       'TRUE',
+                       'FALSE'
+                   );
+
+INSERT INTO [case] (
+                       c_username,
+                       c_caseID,
+                       c_harasserID,
+                       c_platform,
+                       c_notes,
+                       c_transcribedText,
+                       c_isPublic,
+                       c_isPending,
+                       c_isAnon
+                   )
+                   VALUES (
+                       'xvilla',
+                       7,
+                       'nullboi#1111',
+                       'discord',
+                       'consequat. Duis aute irure dolor in reprehend',
+                       'transcribed text from photo goes here',
+                       'TRUE',
+                       'TRUE',
+                       'FALSE'
+                   );
 
 
 -- Table: officer
@@ -89,8 +268,8 @@ INSERT INTO profile (
                     VALUES (
                         'jakeafred',
                         'jfrederick@ucmerced.edu',
-                        'Jacob',
-                        'Frederick',
+                        'jacob',
+                        'frederick',
                         '1999-10-12',
                         '2097777777',
                         'true',
